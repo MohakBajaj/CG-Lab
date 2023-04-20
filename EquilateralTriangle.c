@@ -10,17 +10,6 @@ void displayMe(void)
 	glEnd();
 	glFlush();
 }
-void mykeyboard(unsigned char key, int x, int y)
-{
-	glClear(GL_COLOR_BUFFER_BIT);
-	glBegin(GL_TRIANGLES);
-	glColor3f(1, 0, 0);
-	glVertex2f(-0.7, -0.7);
-	glVertex2f(0.7, -0.7);
-	glVertex2f(0, 0.7);
-	glEnd();
-	glFlush();
-}
 int main(int argc, char **argv)
 {
 	glutInit(&argc, argv);
@@ -29,7 +18,6 @@ int main(int argc, char **argv)
 	glutInitWindowPosition(100, 100);
 	glutCreateWindow("Equilateral Triangle");
 	glutDisplayFunc(displayMe);
-	glutKeyboardFunc(mykeyboard);
 	glutMainLoop();
 	return 0;
 }
